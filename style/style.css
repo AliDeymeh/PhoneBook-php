@@ -1,0 +1,106 @@
+@font-face {
+  font-family: "Estedad-FD-Regular";
+  src: url("../public/fonts/Estedad-FD-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Estedad-FD-Black";
+  src: url("../public/fonts/Estedad-FD-SemiBold.woff2") format("woff2");
+}
+
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to left, #f566, #f569);
+  direction: rtl;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  width: 450px;
+  height: 350px;
+  background-color: red;
+  margin: auto;
+  background-color: #f567;
+  border: 2px solid #FFF;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 120px auto;
+}
+
+.data-set {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+}
+
+.data-set label {
+  width: 100%;
+  font-family: "Estedad-FD-Black";
+  margin: 2px 0;
+}
+
+.data-set p {
+  width: 100%;
+  font-family: "Estedad-FD-Black";
+  margin: 2px 0;
+  text-align: center;
+  font-weight: 700;
+}
+
+.data-set input {
+  font-family: "Estedad-FD-Regular";
+  width: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 5px 6px;
+  border: none;
+  outline: none;
+  background-color: #fff9;
+  color: #000;
+}
+
+.data-set button {
+  background-color: #FFF;
+  width: 120px;
+  font-family: "Estedad-FD-Black";
+  height: 45px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border: none;
+  outline: none;
+  margin: auto;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  cursor: pointer;
+}
+
+.data-set button:hover {
+  background-color: #99ff99;
+
+}

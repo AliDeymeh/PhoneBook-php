@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/style.css" />
+  </head>
+  <body>
+    <form
+      class="container"
+      action="../add.php"
+      method="post"
+      enctype="multipart/form-data"
+    >
+      <div class="data-set">
+        <p>افزودن کاربر جدید</p>
+      </div>
+      <div class="data-set">
+        <label for="name">نام</label>
+        <input type="text" id="name" class="input" />
+      </div>
+      <div class="data-set">
+        <label for="lastname">نام خانوادگی</label>
+        <input type="text" id="lastname" class="input" />
+      </div>
+      <div class="data-set">
+        <label for="phone">تلفن</label>
+        <input type="text" id="phone" class="input" />
+      </div>
+      <div class="data-set">
+        <button type="submit">ثبت اطلاعات</button>
+      </div>
+    </form>
+  </body>
+</html>
