@@ -4,7 +4,7 @@ $sqlRead = "SELECT * FROM contacts";
 $result = $conn->query($sqlRead);
 
 if ($result->num_rows > 0) {
-    echo "<table>
+    echo "<table class='table table-hover table-striped table-responsive'>
     <thead>
     <tr>
           <th>ردیف</th>
@@ -18,10 +18,10 @@ if ($result->num_rows > 0) {
     $row_num = 1;
     while ($row = $result->fetch_assoc()) {
         echo "<tr>";
-        echo "<td>$row_num</td>";
-        echo "<td data-th='نام'>" . $row["name"] . "</td>";
-        echo "<td data-th='نام خانوادگی'>" . $row["lastname"] . "</td>";
-        echo "<td data-th='تلفن'>" . $row["phone"] . "</td>";
+        echo "<td class='text-capitalize' >$row_num</td>";
+        echo "<td class='text-capitalize'  data-th='نام'>" . $row["name"] . "</td>";
+        echo "<td  class='text-capitalize' data-th='نام خانوادگی'>" . $row["lastname"] . "</td>";
+        echo "<td  class='text-capitalize' data-th='تلفن'>" . $row["phone"] . "</td>";
         echo "</tr>";
 
         $row_num++;
