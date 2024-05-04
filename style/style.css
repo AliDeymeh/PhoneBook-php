@@ -42,6 +42,58 @@ body {
   margin: 120px auto;
 }
 
+.form-search {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-around;
+  width: 450px;
+  height: 140px;
+  background-color: rgb(119, 171, 255) !important;
+  margin: auto;
+  border: 2px solid #FFF;
+  padding: 10px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  margin: 120px auto;
+}
+
+.form-search input {
+  font-family: "Estedad-FD-Regular";
+  width: 100%;
+  border-radius: 6px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -o-border-radius: 6px;
+  padding: 5px 6px;
+  border: none;
+  outline: none;
+  background-color: #fff9;
+  color: #000;
+}
+
+.form-search button {
+  background-color: aqua;
+  color: #000000;
+  font-family: "Estedad-FD-Black";
+  border-radius: 8px;
+  padding: 5px 15px;
+  margin: auto;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  font-family: "Estedad-FD-Black";
+  border: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+}
+
 .data-set {
   width: 100%;
   display: flex;
@@ -50,7 +102,13 @@ body {
   justify-content: space-around;
 }
 
-.data-set label {
+.container .data-set label {
+  width: 100%;
+  font-family: "Estedad-FD-Black";
+  margin: 2px 0;
+}
+
+.container label {
   width: 100%;
   font-family: "Estedad-FD-Black";
   margin: 2px 0;
@@ -83,21 +141,21 @@ body {
   background-color: #FFF;
   width: 120px;
   font-family: "Estedad-FD-Black";
+  border: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
   height: 45px;
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
   -ms-border-radius: 8px;
   -o-border-radius: 8px;
-  border: none;
-  outline: none;
-  margin: auto;
   transition: all 0.5s ease;
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  cursor: pointer;
 }
 
 .data-set button:hover {
@@ -117,10 +175,85 @@ main {
   border-radius: 0.5em;
 }
 
+.rwd-table {
+  margin: auto;
+}
+
+.rwd-table button {
+  font-family: "Estedad-FD-Black";
+  border: none;
+  outline: none;
+  margin: auto;
+  cursor: pointer;
+  background-color: red;
+  color: #FFF;
+  padding: 5px 15px;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 65px;
+  margin-bottom: 25px;
+  padding-top: 5px;
+}
+
+.header ul {
+  padding: 10px;
+  width: 75%;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 100%;
+  background-color: #F66;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+.header ul li {
+  margin: 0 5px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header ul li a {
+  color: #FFF;
+  text-decoration: none;
+  font-family: "Estedad-FD-Regular";
+  height: 80%;
+  padding: 2px 10px;
+  border: 1px solid #FFF;
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+}
+
+
 table {
   margin: 1em 0;
   border-collapse: collapse;
-  /*   width: 100%; */
+  /*width: 100%;
+  */
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
 }
 
 caption {
@@ -131,7 +264,7 @@ caption {
 
 th,
 td {
-  padding: 0.25em 0.5em 0.25em 1em;
+  padding: 0.8em 1em;
   vertical-align: text-top;
   text-align: left;
   text-indent: -0.5em;
