@@ -10,7 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['id'])) {
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 }
-echo  "<form class='container form-search' 
+echo  "
+<section class='div-searching'>
+
+<form class='container form-search' 
       
       method='post'
       enctype='multipart/form-data' action='search.php'> <!-- فرم برای ارسال اطلاعات به سمت فایل search.php -->
@@ -18,12 +21,30 @@ echo  "<form class='container form-search'
         <input style={{color:'red'}} type='text' id='phone' name='phone' placeholder='شماره تلفن را ورودی دهید'> <!-- ورودی جهت وارد کردن شماره تلفن -->
         <button type='submit'>جستجو</button> <!-- دکمه ارسال فرم برای جستجو -->
     </form>
+<form class='container form-search' 
+      
+      method='post'
+      enctype='multipart/form-data' action='search.php'> <!-- فرم برای ارسال اطلاعات به سمت فایل search.php -->
+        <label for='name' > نام : </label>
+        <input style={{color:'red'}} type='text' id='name' name='name' placeholder='شماره تلفن را ورودی دهید'> <!-- ورودی جهت وارد کردن نام  -->
+        <button type='submit'>جستجو</button> <!-- دکمه ارسال فرم برای جستجو -->
+    </form><form class='container form-search' 
+      
+      method='post'
+      enctype='multipart/form-data' action='search.php'> <!-- فرم برای ارسال اطلاعات به سمت فایل search.php -->
+        <label for='lastname' >نام خانوادگی : </label>
+        <input style={{color:'red'}} type='text' id='lastname' name='lastname' placeholder='شماره تلفن را ورودی دهید'> <!-- ورودی جهت وارد کردن  نام خانوادگی -->
+        <button type='submit'>جستجو</button> <!-- دکمه ارسال فرم برای جستجو -->
+    </form>
+</section>    
 ";
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $phone_search = mysqli_real_escape_string($conn, $_POST['phone']); // شماره تلفن مورد جستجو
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $phone_search =!empty($_POST['phone'])? mysqli_real_escape_string($conn, $_POST['phone']):""; // شماره تلفن مورد جستجو
+$name_search =!empty($_POST['name'])? mysqli_real_escape_string($conn, $_POST['name']):"";
+$lastname_search =!empty($_POST['lastname'])? mysqli_real_escape_string($conn, $_POST['lastname']):"";
     // کوئری SELECT برای جستجو در بخش شماره تلفن
-    $sql_search = "SELECT * FROM contacts WHERE phone LIKE '$phone_search%'";
+    $sql_search =!empty($phone_search) ?"SELECT * FROM contacts WHERE phone LIKE '%$phone_search%'":!empty($name_search)?"SELECT * FROM contacts WHERE name LIKE '%$name_search%'":"SELECT * FROM contacts WHERE lastname LIKE '%$lastname_search%'";
     $result_search = $conn->query($sql_search);
 
     if ($result_search->num_rows > 0) {

@@ -42,6 +42,8 @@ body {
   margin: 120px auto;
 }
 
+
+
 .form-search {
   display: flex;
   flex-direction: column;
@@ -249,18 +251,10 @@ table {
   border-collapse: collapse;
   /*width: 100%;
   */
-  border-radius: 8px;
-  -webkit-border-radius: 8px;
-  -moz-border-radius: 8px;
-  -ms-border-radius: 8px;
-  -o-border-radius: 8px;
+
 }
 
-caption {
-  text-align: left;
-  font-style: italic;
-  padding: 0.25em 0.5em 0.5em 0.5em;
-}
+
 
 th,
 td {
@@ -300,113 +294,13 @@ td:nth-of-type(3) {
   text-align: right;
 }
 
-div {
-  overflow: auto;
-}
 
-@media screen and (max-width: 37em),
-print and (max-width: 5in) {
 
-  table,
-  tr,
-  td {
-    display: block;
-  }
+.div-searching {
 
-  tr {
-    padding: 0.7em 2vw;
-  }
+  width: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: space-between;
 
-  th,
-  tr:first-of-type {
-    display: none;
-  }
-
-  td::before {
-    display: inline;
-    font-weight: bold;
-  }
-
-  td {
-    display: grid;
-    grid-template-columns: 4em auto;
-    grid-gap: 1em 0.5em;
-  }
-
-  caption {
-    font-style: normal;
-    background-color: rgba(0, 0, 0, 0.35);
-    color: #fff;
-    font-weight: bold;
-  }
-
-  td:nth-of-type(3) {
-    text-align: left;
-  }
-
-  td:nth-of-type(4),
-  td:nth-of-type(5) {
-    text-align: right;
-    width: 12em;
-  }
-
-  td:nth-of-type(4)::before,
-  td:nth-of-type(5)::before {
-    text-align: left;
-  }
-
-  td:nth-of-type(2)::before {
-    font-style: normal;
-  }
-}
-
-@media print {
-  body {
-    font-size: 6pt;
-    color: #000;
-    background-color: #fff;
-    background-image: none;
-  }
-
-  body,
-  main {
-    margin: 0;
-    padding: 0;
-    background-color: #fff;
-    border: none;
-  }
-
-  table {
-    page-break-inside: avoid;
-  }
-
-  div {
-    overflow: visible;
-  }
-
-  th {
-    color: #000;
-    background-color: #fff;
-    border-bottom: 1pt solid #000;
-  }
-
-  tr {
-    border-top: 1pt solid #000;
-  }
-}
-
-@media print and (max-width: 5in) {
-  caption {
-    color: #000;
-    background-color: #fff;
-    border-bottom: 1pt solid #000;
-  }
-
-  table {
-    page-break-inside: auto;
-  }
-
-  tr {
-    page-break-inside: avoid;
-  }
 }
